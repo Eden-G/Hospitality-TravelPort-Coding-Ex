@@ -33,7 +33,7 @@ public class StateController {
 		return this.stateService.getAllStates();
 	}
 	
-	@ApiOperation(value = "Get details of a state passed as a query parameter")
+	@ApiOperation(value = "Get details of a state passed as path variable")
 	@GetMapping(value = "/states/{stateName}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public State getState(@PathVariable("stateName") String stateName) {
 	
